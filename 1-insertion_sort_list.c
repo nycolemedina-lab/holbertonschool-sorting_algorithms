@@ -23,8 +23,8 @@ void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2)
 
 /**
 * insertion_sort_list - sorts a doubly linked list of integers
-*			in ascending order uding insertion sort
-* @list double pointer to the head of the dounly linked list
+*			in ascending order using insertion sort
+* @list: double pointer to the head of the doubly linked list
 *
 * Return: void
 */
@@ -32,7 +32,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr, *insert, *tmp;
 
-	if (list == NULL || *list == NULL) || (*list)->next == NULL)
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
 	curr = (*list)->next;
@@ -43,9 +43,9 @@ void insertion_sort_list(listint_t **list)
 
 		while (insert->prev != NULL && insert->n < insert->prev->n)
 		{
-			swap_node(list, insert->prev, insert);
+			swap_nodes(list, insert->prev, insert);
 			print_list(*list);
 		}
-		curr = temp;
+		curr = tmp;
 	}
 }
