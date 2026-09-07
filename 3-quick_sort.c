@@ -45,7 +45,7 @@ static void quick_sort_range(int *array, size_t size, int low, int high)
 
 
 
-/*
+/**
 * quick_sort - sort an array of integers in ascending order
 *		using the quick sort algorithm (Lomuto scheme)
 * @array: pointer to the array to sort
